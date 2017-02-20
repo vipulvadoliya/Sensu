@@ -1,0 +1,10 @@
+{
+	"checks": {
+		"disk_check": {
+			"command": "check-disk-usage.rb -w 90 -c 95",
+			"subscribers": ["webservers", "ubuntu"],
+			"interval": 60,
+			"handlers": ["mailer"]
+		}
+	}
+}

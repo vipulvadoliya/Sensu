@@ -1,0 +1,10 @@
+{
+	"checks": {
+		"cpu_check": {
+			"command": "metrics-user-pct-usage.rb",
+			"interval": 60,
+			"subscribers": ["webservers", "ubuntu"],
+			"handlers": [ "test1" ]
+		}
+	}
+}

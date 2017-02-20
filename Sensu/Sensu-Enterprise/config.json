@@ -1,0 +1,50 @@
+{
+  "rabbitmq": {
+    "host": "192.168.221.153",
+    "port": 5672,
+    "user": "sensu",
+    "password": "secret",
+    "vhost": "/sensu"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "api": {
+    "host": "127.0.0.1",
+    "port": 4567
+  },
+  "handlers": {
+    "default": {
+      "type": "set",
+      "handlers": [
+        "stdout"
+      ]
+    },
+    "stdout": {
+      "type": "pipe",
+      "command": "cat"
+    }
+  },
+  "checks": {
+    "test": {
+      "command": "echo -n OK",
+      "subscribers": [
+        "test","dev"
+      ],
+      "interval": 60
+    },
+    "cron": {
+      "command": "check-process.rb -p cron",
+      "subscribers": [
+        "dev"
+      ],
+      "interval": 60
+    },
+    "cpu_check": {
+      "command": "metrics-user-pct-usage.rb",
+      "interval": 1,
+      "subscribers": [ "dev" ]
+    }
+  }
+}

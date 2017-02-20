@@ -1,0 +1,14 @@
+{
+	"handlers": {
+		"test1": {
+			"type": "set",
+			"handlers": [
+				"test_disk"
+			]
+		},
+		"test_disk": {
+			"type": "pipe",
+			"command": "echo $(cat) > /tmp/handlers_test2.txt"
+		}
+	}
+}

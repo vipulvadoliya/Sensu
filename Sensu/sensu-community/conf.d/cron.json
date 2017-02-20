@@ -1,0 +1,9 @@
+{
+	"checks": {
+		"cron": {
+			"command": "check-process.rb -p cron",
+			"subscribers": ["webservers", "ubuntu"],
+			"interval": 60
+		}
+	}
+}

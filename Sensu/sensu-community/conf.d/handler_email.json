@@ -1,0 +1,15 @@
+{
+  "handlers": {
+    "mailer": {
+      "type": "pipe",
+      "command": "/opt/sensu/embedded/bin/handler-mailer.rb",
+      "enable_deprecated_filtering": "false",
+      "admin_gui": "http://localhost:3000/",
+      "mail_from": "sensu@localhost",
+      "mail_to": "root@localhost",
+      "smtp_address": "localhost",
+      "smtp_port": "25",
+      "smtp_domain": "localhost"
+      }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "host": "192.168.221.153",
+  "port": 5672,
+  "vhost": "/sensu",
+  "user": "sensu",
+  "password": "secret"
+}

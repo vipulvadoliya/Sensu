@@ -1,0 +1,9 @@
+{
+	"handlers": {
+		"test1": {
+			"type": "pipe",
+			"filter": "state_change_only",
+			"command": "echo $(cat) > /tmp/handlers_test2.txt"
+		}
+	}
+}

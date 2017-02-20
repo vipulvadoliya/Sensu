@@ -1,0 +1,10 @@
+{
+	"checks": {
+		"apache_check": {
+			"command": "metrics-apache-graphite.rb",
+			"interval": 10,
+			"subscribers": ["ubuntu"],
+			"handlers": ["mailer"]
+		}
+	}
+}
